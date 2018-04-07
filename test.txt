@@ -1,1 +1,0 @@
-This is so I can remotely add the server master branch to my computer
