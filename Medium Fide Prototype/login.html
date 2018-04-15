@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--The items in the tab area-->
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!--Where to find the contents for all the styles-->
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+</head>
+<body>
+    <!--All the functionality in the top of the page-->
+    <header>
+        <img src="images/YaleCrest.png" id = "crest"/>
+        <div id = "address">
+            <p><br>
+                Yale School of Art <br>
+                1156 Chapel Street, POB 208339 <br>
+                New Haven, Connecticut, 06520-8339 <br>
+                (203) 432-2600
+            </p>
+        </div>
+
+        <!--Search bar in the page-->
+        <div id = "search">
+            <form action = "index.html">
+                <input type="text"  value="" name="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <!--The links to other pages, including the dropdown-->
+        <ul>
+            <li class="dropdown"><!--The original list of links-->
+                <a href="index.html" class="dropbtn">Home <!--Traeting the link as the button for the other list-->
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#aboutthiswebsite" class="dropbtn">About This Website
+                </a> <!--The dropdown menu, first of many-->
+                <div class="dropdown-content">
+                  <a href="#Contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#admission">Admission
+                </a>
+                <div class="dropdown-content">
+                  <a href="#Undergraduate">Undergraduate</a>
+                  <a href="#Visting">Visting</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#Calenders">Calenders
+                </a>
+                <div class="dropdown-content">
+                  <a href="#Programmes">Summer Programmes</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#Courses">Courses
+                </a>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "currentStudents.html">Current Students
+                </a>
+                <div class="dropdown-content">
+                  <a href="#StudyAreas">Study Areas</a>
+                  <a href="#Facilities">Facilities</a>
+                  <a href="#Gallery">Gallery</a>
+                  <a href="login.html">Login</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#FacilityAndStaff">Facility and Staff
+                </a>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#FinacialAid">Finacial Aid
+                </a>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" a href = "#EverythingElse">Everything Else
+                </a>
+            </li>
+        </ul>
+
+        <!--The slideshow of the page-->
+        <div id="slider">
+            <div id="box">
+                <img src="images/a.jpg">
+            </div>
+            <button class="prev" onclick="  preImg()">&#10094;</button>
+            <button class="next" onclick=" nextImg()">&#10095;</button>
+        </div>
+
+        <!--JavaScript for preformance of the web-->
+        <script type = "text/javascript">
+        var sliderContent = document.getElementById('box');
+
+        var image = ['a','b','c','d','f'];
+
+        var i = 1;
+
+        function nextImg()
+        {
+            if (i < image.length)
+            {
+                i = i+1;
+            }
+            else
+            {
+                i = 1;
+            }
+
+            sliderContent.innerHTML = "<img src =images/" + image[i-1] + ".jpg>";
+        }
+
+        function preImg()
+        {
+            if (i > 1)
+            {
+                i = i-1;
+            }
+            else
+            {
+                i = image.length;
+            }
+
+                sliderContent.innerHTML = "<img src =images/" + image[i-1] + ".jpg>";
+        }
+    </script>
+    <!--end javascript-->
+    </header>
+
+    <!--The body of the page-->
+    <section>
+
+        <h1>Login page</h1>
+
+        <div id = "centerLogin">
+
+        <form action = "index.html">
+            Username: <input type="text" name="username" class = "input"><br>
+            Password: <input type="password" name="passWord" class = "input"><br>
+            <button type="submit" class = "input">Submit</button>
+            <button type="reset" class = "input">Reset</button>
+
+        </form>
+
+        </div>
+       <div  id = "left" class = "outer"><a href=""><img src="images/o.jpg"></a></div>
+
+        <div id = "center" class = "outer"><a href=""><img src="images/q.jpg"></a></div>
+
+        <div id = "right" class = "outer"><a href=""><img src="images/p.jpg"></a></div>
+    </section>
+
+    <!--The foot of the page-->
+    <footer>
+        <h1>Site Created by Group 3 <br>Human Computer Interaction &copy:2018</h1>
+    </footer>
+
+</body>
+</html>
