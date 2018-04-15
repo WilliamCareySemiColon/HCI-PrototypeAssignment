@@ -13,12 +13,15 @@ body
     position: absolute;
     color: snow;
     background-color: #CC7722;
+    margin: 0;
+    padding: 0;
+
 }
 /*The colour of the main body of the page*/
 section
 {
     background-color: #CC7722;
-
+    width: 100%;
 }
 /*The colour of the top and bottom of the page*/
 header, footer
@@ -26,21 +29,19 @@ header, footer
     width: 100%;
     position: relative;
     background-color: red;
-    left: 0;
-    right: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
 }
 
-header
-{
-    top: 0;
-    
-}
 footer
 {
-    bottom: 0;
+    overflow: hidden;
     text-align: center;
 }
 
+/*Styles the crest of the school at the top of the page*/
 #crest
 {
     float: left;
@@ -50,17 +51,101 @@ footer
     margin-left: 1em;
 }
 
+/*Styling of the search bar*/
 #search
 {
     float: right;
     margin-right: 1em;
 }
 
-
-#search button i
+/*Style of the slider at the top of the page*/
+#slider img
 {
-    font-size: 1em;
+    width: 100%;
+    height: 20em;
 }
+
+#slider
+{
+    width: 99.55%;
+    height: 20em;
+    position: relative;
+    border: solid #003153;
+    margin-right: 5%;
+
+}
+
+.prev, .next
+{
+    padding: 20px;
+    border: none;
+    background-color: #003153;
+    color: white;
+    position: absolute;
+    top: 50%;
+}
+
+
+.next
+{
+    margin-left: 96.55%;
+    border-radius: 1em 0 0 1em;
+}
+
+.prev
+{
+    border-radius: 0 1em 1em 0;
+}
+
+/*Paragraph under the slideshow presentation*/
+.updates
+{
+    border: solid #003153;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    font-size: 1.5em;
+}
+
+/*The gallaries after the slideshow*/
+.outer
+{
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    display: inline-block;
+}
+
+.outer img 
+{
+    width: 100%;
+    height: 15em;
+}
+
+/*The words inside the links themselves*/
+a
+{
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#left
+{
+    margin-left: 0;
+    padding: 0;
+}
+#center 
+{
+    margin-left: 4.5%;
+    padding: 0;
+    margin-right: 4.5%;
+}
+
 
 /*Changes the mouse to a hand when over links*/
 li { cursor: pointer; }
