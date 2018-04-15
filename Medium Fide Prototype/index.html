@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--The items in the tab area-->
     <title>Home</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <!--Where to find the contents for all the styles-->
     <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+    <script src = "JavaScript/index.js"></script>
 </head>
 <body>
-
+    <!--All the functionality in the top of the page-->
     <header>
         <img src="images/YaleCrest.png" id = "crest"/>
         <div id = "address">
@@ -18,23 +21,23 @@
             </p>
         </div>
 
+        <!--Search bar in the page-->
         <div id = "search">
             <form>
                 <input type="text"  value="" name="Search...">
                 <button type="submit">Search</button>
             </form>
         </div>
-        <!--All the list items-->
+        <!--The links to other pages, including the dropdown-->
         <ul>
-            <li class="dropdown">
-                <a href="#home" class="dropbtn">Home
+            <li class="dropdown"><!--The original list of links-->
+                <a href="#home" class="dropbtn">Home <!--Traeting the link as the button for the other list-->
                 </a>
-                <!--The other links are being hidden using a class and an div tag-->
             </li>
 
             <li class="dropdown">
                 <a href="#aboutthiswebsite" class="dropbtn">About This Website
-                </a>
+                </a> <!--The dropdown menu, first of many-->
                 <div class="dropdown-content">
                   <a href="#">Contact</a>
                 </div>
@@ -81,15 +84,55 @@
             </li>
         </ul>
 
+        <!--The slideshow of the page-->
         <div id="slider">
             <div id="box">
                 <img src="images/a.jpg">
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+            <button class="prev" onclick="  preImg()">&#10094;</button>
+            <button class="next" onclick=" nextImg()">&#10095;</button>
         </div>
+
+        <!--JavaScript for preformance of the web-->
+        <script type = "text/javascript">
+        var sliderContent = document.getElementById('box');
+
+        var image = ['a','b','c','d','f'];
+
+        var i = 1;
+
+        function nextImg()
+        {
+            if (i < image.length)
+            {
+                i = i+1;
+            }
+            else
+            {
+                i = 1;
+            }
+
+            sliderContent.innerHTML = "<img src =images/" + image[i-1] + ".jpg>";
+        }
+
+        function preImg()
+        {
+            if (i > 1)
+            {
+                i = i-1;
+            }
+            else
+            {
+                i = image.length;
+            }
+
+                sliderContent.innerHTML = "<img src =images/" + image[i-1] + ".jpg>";
+        }
+    </script>
+    <!--end javascript-->
     </header>
 
+    <!--The body of the page-->
     <section>
 
         <p class="updates">Ongoing updates for the Yale College of Arts</p>
@@ -132,6 +175,7 @@
         </p>
     </section>
 
+    <!--The foot of the page-->
     <footer>
         <h1>Site Created by Group 3 <br>Human Computer Interaction &copy:2018</h1>
     </footer>
