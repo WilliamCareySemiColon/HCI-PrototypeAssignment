@@ -7,7 +7,7 @@ Human Computer Interaction Low and Medium Fidelity Prototype
 
 [Slideshow](https://www.youtube.com/watch?v=sQuniQCzNlY)
 
-[logo inside tab - favicon.ico](view-source:http://art.yale.edu/Home)
+[logo inside tab - favicon.ico - You need to view the source of the page](http://art.yale.edu/Home)
 
 [School badge](https://en.wikipedia.org/wiki/Yale_School_of_Art)
 
