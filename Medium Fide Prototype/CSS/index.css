@@ -23,11 +23,23 @@ h1
     font-size: 5em;
 }
 
+h2
+{
+    text-align: center;
+    font-size: 1em;
+}
+
 /*The colour of the main body of the page*/
 section
 {
     background-color: #CC7722;
     width: 100%;
+}
+
+p
+{
+    margin-left: 2%;
+    margin-right: 2%;
 }
 /*The colour of the top and bottom of the page*/
 header, footer
